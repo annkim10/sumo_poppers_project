@@ -6,7 +6,7 @@
 export const canvas = document.getElementById("canvas-ring")
 canvas.width = 500;
 canvas.height = 500;
-console.log(canvas)
+// console.log(canvas)
 // export const canvasPos = canvas.getBoundingClientRect()
 // console.log(canvasPos)
 // canvas.style.background = "pink"
@@ -20,8 +20,8 @@ export const mouse = {
 }
 
 export const scoreCanvas = document.getElementById("score")
-scoreCanvas.width = 40
-scoreCanvas.height = 40
+scoreCanvas.width = 60
+scoreCanvas.height = 60
 export const scoreCtx = scoreCanvas.getContext("2d")
 
 

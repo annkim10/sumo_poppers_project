@@ -39,7 +39,7 @@ export default class Sumo {
             }
         ]
         this.makeFrames()
-        console.log(this.sumoFrames)
+        // console.log(this.sumoFrames)
     }
 
     update() {
@@ -64,26 +64,37 @@ export default class Sumo {
     }
 
     draw() {
-        ctx.fillStyle = "#bd0028"
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
-        ctx.fill()
-        ctx.closePath()
-        ctx.fillRect(this.x, this.y, this.radius, 0)
-        ctx.drawImage(sumoImg, this.x-40, this.y-44, 80, 80)
-        // ctx.globalAlpha = 0.5
+        if (!this.popped) {
+            ctx.fillStyle = "#bd0028"
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
+            ctx.fill()
+            ctx.closePath()
+            ctx.fillRect(this.x, this.y, this.radius, 0)
+            ctx.drawImage(sumoImg, this.x - 40, this.y - 44, 80, 80)
+        } else {
+            ctx.fillStyle = "#bd0028"
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
+            ctx.fill()
+            ctx.closePath()
+            ctx.fillRect(this.x, this.y, this.radius, 0)
+            ctx.drawImage(poppedSumo, this.x - 40, this.y - 44, 80, 80)
+        }
     }
 
-    // draw() {
+
+
+    // animation() {
     //     ctx.clearRect(0, 0, canvas.width, canvas.height)
-    //     let position = Math.floor(this.gameFrame / 7) % this.sumoFrames.unpop.loc.length;
+    //     let position = Math.floor(this.gameFrame / 55000) % this.sumoFrames.unpop.loc.length;
     //     console.log(position)
     //     let frameX = this.width * position;
     //     console.log(this.sumoFrames)
     //     let frameY = this.sumoFrames.unpop.loc[position].y;
     //     console.log(frameX, frameY)
     //     ctx.drawImage(sumoFrames, frameX, frameY, this.width, this.height, this.x, this.y, canvas.width / 4, canvas.height / 4)
-    //     ctx.globalAlpha = 0.5
+    //     // ctx.globalAlpha = 0.5
     //     console.log(position)
     //     requestAnimationFrame(this.draw.bind(this))
     // }

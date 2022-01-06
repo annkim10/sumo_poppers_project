@@ -9,9 +9,9 @@ export default class Player {
     constructor() {
         this.x = canvas.width
         this.y = canvas.height/3
-        console.log("player")
-        console.log(this.x, this.y)
-        console.log(mouse)
+        // console.log("player")
+        // console.log(this.x, this.y)
+        // console.log(mouse)
         this.radius = 5
     }
 
