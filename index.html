@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-a11y="true"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Sumo Poppers</title>
+<script defer src="main.js"></script></head>
+
+<body>
+    <section class="nav">
+        <div class="logo">
+            <img src="assets/a8ee0cfdff086716583a.png">
+        </div>
+        <br>
+    </section>
+    <section>
+
+    </section>
+    <section class="game">
+        <div class="left">
+            <div class="about">
+                <h1>How many can you pop?</h1>
+                <p id="description"> Sumo Poppers is a digital spin on the popular <strong>Pop It</strong> toys that
+                    provide endless
+                    entertainment.
+                    <br>
+                    <br>
+                    Once you've popped all the sumo wrestlers, progress to the next level and see how many more you can
+                    pop!
+                </p>
+                <div class="instructions">
+                    <img id="how-to" src="assets/b5c91763649109bdd791.png">
+                </div>
+            </div>
+        </div>
+        <div id="ring">
+            <div><canvas id="canvas-ring"></canvas></div>
+            <img id="ring-img" src="assets/3202112c6c63efe3f6f1.png">
+        </div>
+        <div class="right">
+            <div class="game-controls">
+                <div id="level-tracker">
+                    <span>1</span>
+                    <p>LEVEL</p>
+                </div>
+
+                <ul class="controls">
+                    <li><button id="start-button" onclick="startPlay()"><i class="fas fa-play"></i>
+                            <br>Start</button></li>
+                    <li><button id="reset_button"><i class="fas fa-redo"></i>
+                            <br>Reset</button></li>
+                    <li><button id="mute_button"><i class="fas fa-volume-mute"></i>
+                            <br>Mute</button></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="hidden">
+        <!-- <audio id="sound" src="assets/sfx-pop.mp3"></audio> -->
+        <img id="animation" src="assets/f74c012a1c49bca58405.png">
+        <img id="popped-animation" src="assets/4bce2982f661fd4c112a.png">
+        <img id="frames" src="assets/59545f8247f3bbca45ec.png">
+    </div>
+</body>
+
+</html>
