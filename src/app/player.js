@@ -21,12 +21,12 @@ let gameFrame = 0
 
 export default class Player {
     constructor() {
-        this.x = (canvas.width / 2) - canvasPos.left
+        this.x = (canvas.width / 2)
         this.y = canvas.height / 2
         console.log("player")
         console.log(this.x, this.y)
         console.log(mouse)
-        this.radius = 10
+        this.radius = 5
         this.angle = 0
         this.frameX = 0
         this.frameY = 0
@@ -43,14 +43,14 @@ export default class Player {
 
         // console.log("distances")
         // console.log(dx, dy)
-        if (mouse.x != this.x) {
-            (this.x -= dx)
+        if (mouse.x !== this.x) {
+            (this.x -= (dx/20))
             // console.log(mouse)
             // console.log(this.x)
             //dx/300
         }
-        if (mouse.y != this.y) {
-            (this.y -= dy)
+        if (mouse.y !== this.y) {
+            (this.y -= dy/20)
         }
     }
 
@@ -67,7 +67,7 @@ export default class Player {
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
         ctx.fill()
         ctx.closePath()
-        ctx.fillRect(this.x, this.y, this.radius, 10)
+        ctx.fillRect(this.x, this.y, this.radius, 0)
     }
 
 

@@ -16,9 +16,9 @@ export default class Sumo {
         // (console.log(player))
         this.x = Math.random() * canvas.width
         // console.log(this.x)
-        this.y = canvas.height + 100
-        this.radius = 20
-        this.speed = Math.random() * 1 + 1
+        this.y = Math.random() * canvas.width
+        this.radius = 10
+        this.speed = Math.random() * 2 + 1
         this.distance
         this.popped = false
     }

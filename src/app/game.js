@@ -55,27 +55,27 @@ export default class Game {
             this.sumosArr.push(new Sumo(this.player))
             // console.log(this.sumosArr)
         }
-
+        
         for (let i = 0; i < this.sumosArr.length; i++ ) {
             this.sumosArr[i].update()
             this.sumosArr[i].draw()
-        }
+            if (this.sumosArr[i].y < 0 - this.sumosArr[i].radius * 2) {
+                this.sumosArr.splice(i, 1)
+                i--
+            } else if (this.sumosArr[i].distance < this.sumosArr[i].radius + this.player.radius) {
+                    if (!this.sumosArr[i].popped) {
+                        this.score++
+                        this.sumosArr[i].popped = true
+                        this.sumosArr.splice(i, 1)
+                        i--
+                    }
 
-        for (let i = 0; i < this.sumosArr.length; i++) {
-            // if (this.sumosArr[i] < 0 - this.sumosArr[i].radius * 2 ) {
-            //     this.sumosArr.splice(i, 1)
-            //     i--
-            // }
-            if (this.sumosArr[i].distance < (this.sumosArr[i].radius + this.player.radius)) {
-                if (!this.sumosArr[i].popped) {
-                    this.score++
-                    this.sumosArr[i].popped = true
-                    this.sumosArr.splice(i, 1)
-                    i--
-                }
             }
+            //
+        };
+           
             // console.log(this.score)
-        }
+        };
 
 
 
@@ -83,5 +83,3 @@ export default class Game {
 
 
 
-
-}
