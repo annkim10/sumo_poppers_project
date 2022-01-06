@@ -9,5 +9,5 @@ let game = new Game()
 game.startGame()
 
 let sumo = new Sumo()
-sumo.draw()
+// sumo.draw()
 

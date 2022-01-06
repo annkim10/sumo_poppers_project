@@ -7,8 +7,8 @@ export const canvas = document.getElementById("canvas-ring")
 canvas.width = 500;
 canvas.height = 500;
 console.log(canvas)
-export const canvasPos = canvas.getBoundingClientRect()
-console.log(canvasPos)
+// export const canvasPos = canvas.getBoundingClientRect()
+// console.log(canvasPos)
 // canvas.style.background = "pink"
 export const ctx = canvas.getContext("2d")
 // console.log("width")

@@ -82,18 +82,19 @@ body {
 #ring-img {
     /* background-color: green; */
     position: static;
-    width: 510px;
-    height: 510px;
+    width: 540px;
+    height: 540px;
     z-index: -50;
 }
 
 #canvas-ring {
     position: absolute;
-    /* border: 1px solid black;
-    background-color: rgba(245, 222, 179, 0.226); */
+    /* border: 1px solid black; */
+    /* background-color: rgba(39, 28, 7, 0.923); */
     width: 500px;
     height: 500px;
     z-index: 100;
+    transform: translate(4%, 4%);
 }
 
 .about {
