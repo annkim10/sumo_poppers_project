@@ -75,10 +75,11 @@ export default class Game {
         for (let i = 0; i < this.sumosArr.length; i++ ) {
             this.sumosArr[i].update()
             this.sumosArr[i].draw()
+            
             if (this.sumosArr[i].y < 0 - this.sumosArr[i].radius * 2) {
-                this.sumosArr.popped = true
-                // this.sumosArr.splice(i, 1)
-                // i--
+                // this.sumosArr.popped = true
+                this.sumosArr.splice(i, 1)
+                i--
             } else if (this.sumosArr[i].distance < this.sumosArr[i].radius + this.player.radius) {
                     if (!this.sumosArr[i].popped) {
                         this.score++
@@ -96,7 +97,9 @@ export default class Game {
                         
                     }
             }
+    
             this.sumosArr.filter(sumo => !sumo.popped)
+          
         }; 
             // console.log(this.score)
         };

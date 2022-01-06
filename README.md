@@ -1,7 +1,7 @@
 # Sumo Poppers
 
 ## Background ##
-Sumo Poppers is a spin on the classic bubble popping games but instead of bubbles...pop sumo wrestlers! Sumo wrestlers will appear randomly on the screen waiting to be popped. Users can move the mouse to pop the sumo before they float away. 
+Sumo Poppers is a spin on the classic bubble popping games but instead of bubbles...pop sumo wrestlers! Sumo wrestlers will appear randomly on the screen waiting to be popped. Users can move the mouse to pop the sumo before they float away. Click to start playing (https://annkim10.github.io/sumo_poppers_project/).
 
 
 ## Functionality & MVPs ##
