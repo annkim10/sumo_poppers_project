@@ -33,7 +33,7 @@ export default class Sumo {
         this.popped = false
         this.width = 300
         this.height = 300
-        this.gameFrame = gameFrame || 0
+        this.gameFrame = 1
         this.sumoFrames = []
         this.animationStates = [
             {
@@ -94,19 +94,18 @@ export default class Sumo {
 
 
 
-    // animation() {
-    //     ctx.clearRect(0, 0, canvas.width, canvas.height)
-    //     let position = Math.floor(this.gameFrame / 55000) % this.sumoFrames.unpop.loc.length;
-    //     console.log(position)
-    //     let frameX = this.width * position;
-    //     console.log(this.sumoFrames)
-    //     let frameY = this.sumoFrames.unpop.loc[position].y;
-    //     console.log(frameX, frameY)
-    //     ctx.drawImage(sumoFrames, frameX, frameY, this.width, this.height, this.x, this.y, canvas.width / 4, canvas.height / 4)
-    //     // ctx.globalAlpha = 0.5
-    //     console.log(position)
-    //     requestAnimationFrame(this.draw.bind(this))
-    // }
+    animation() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        let position = Math.floor(this.gameFrame / 8) % 16;
+        // console.log(position)
+        let frameX = this.width * position;
+        // console.log(this.sumoFrames)
+        let frameY = this.sumoFrames.unpop.loc[position].y;
+        // console.log(frameX, frameY)
+        ctx.drawImage(sumoFrames, frameX, frameY, this.width, this.height, 130, 120, canvas.width / 2, canvas.height / 2)
+        this.gameFrame++
+        requestAnimationFrame(this.animation.bind(this))
+    }
 
     // animation() {
     //     this.draw()

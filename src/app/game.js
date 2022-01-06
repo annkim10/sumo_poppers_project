@@ -58,6 +58,11 @@ export default class Game {
         requestAnimationFrame(this.startGame.bind(this))
     }
 
+    beforeStart() {
+        let sumo = new Sumo()
+        sumo.animation()
+    }
+
     drawScore() {
         scoreCtx.clearRect(0,0, scoreCanvas.width, scoreCanvas.height)
         scoreCtx.fillStyle = "white"

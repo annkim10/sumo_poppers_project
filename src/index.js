@@ -19,6 +19,8 @@ window.onload = function() {
     })
 
     game.muteSound()
+
+    game.beforeStart()
     
 
 }
