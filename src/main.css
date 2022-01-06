@@ -87,6 +87,19 @@ body {
     z-index: -50;
 }
 
+.link-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: cornflowerblue; */
+}
+
+.links:hover {
+   height: 80px;
+   width: 100px;
+}
+
+
 #canvas-ring {
     position: absolute;
     /* border: 1px solid black; */
