@@ -1,9 +1,9 @@
 import Sumo from "./sumo"
 import Player from "./player"
 // // import "./main.css";
-import { canvas, ctx, mouse} from "./utils"
+import { canvas, ctx, mouse, scoreCanvas, scoreCtx} from "./utils"
 
-const canvasPos = canvas.getBoundingClientRect()
+let canvasPos = canvas.getBoundingClientRect()
 const ring = document.getElementById("ring-img")
 const ringImg = new Image();
 ringImg.src = ring.src;
@@ -11,10 +11,10 @@ ringImg.src = ring.src;
 // let score = 0
 // let gameFrame = 0
 
-// window.addEventListener("resize", function(e){
-//     canvasPos = canvas.getBoundingClientRect()
-//     console.log(canvasPos)
-// })
+window.addEventListener("resize", function(e){
+    canvasPos = canvas.getBoundingClientRect()
+    console.log(canvasPos)
+})
 
 canvas.addEventListener("mousedown", function (e) { //originally "mousedown"
     mouse.x = e.x - canvasPos.left
@@ -30,8 +30,8 @@ canvas.addEventListener("mouseup", function (e) {
     console.log(mouse)
 })
 
-// canvas.addEventListener("click", function (e) {
-//     ctx.clearRect(0,0, canvas.width, canvas.height)
+// canvas.addEventListener("click", (e) => {
+//     ctx.clearRect(0, 0, canvas.width, canvas.height)
 //     ctx.fillRect(e.x - canvasPos.left - 50, e.y - canvasPos.top-50, 100, 100)
 //     console.log(mouse)
 // })
@@ -58,9 +58,13 @@ export default class Game {
     }
 
     drawScore() {
-        ctx.fillStyle = "#bd0028"
-        ctx.fillText(`${this.score} popped`, 35, 60)
-        ctx.font = '18px Comfortaa'
+        scoreCtx.clearRect(0,0, scoreCanvas.width, scoreCanvas.height)
+        scoreCtx.fillStyle = "white"
+        scoreCtx.fillText(`${this.score}`, 20,30)
+        scoreCtx.textAlign = "center"
+        scoreCtx.font = '35px Fredoka One'
+        // ctx.fillText(`${this.score} popped`, 35, 60)
+        // ctx.font = '18px Comfortaa'
     }
 
     makeSumos() {

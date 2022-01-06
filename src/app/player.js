@@ -4,21 +4,6 @@ import { canvas,  ctx, mouse } from "./utils"
 
 
 let score = 0
-let gameFrame = 0
-
-// canvas.addEventListener("mousedown", function (e) {
-//     mouse.x = e.x - canvasPos.left
-//     // console.log("this is canvasPos left")
-//     // console.log(canvasPos.left)
-//     mouse.y = e.y - canvasPos.top
-//     mouse.click = true
-//     // console.log(mouse)
-// })
-
-// canvas.addEventListener("mouseup", function (e) {
-//     mouse.click = false
-//     // console.log(mouse)
-// })
 
 export default class Player {
     constructor() {

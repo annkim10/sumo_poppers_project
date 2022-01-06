@@ -19,5 +19,9 @@ export const mouse = {
     click: false
 }
 
+export const scoreCanvas = document.getElementById("score")
+scoreCanvas.width = 40
+scoreCanvas.height = 40
+export const scoreCtx = scoreCanvas.getContext("2d")
 
 
