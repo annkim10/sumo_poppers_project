@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <title>Sumo Poppers</title>
+    <link rel="icon" type="image/x-icon" href="images/2fbf045e56b737ad4f68.ico">
 <script defer src="main.js"></script></head>
 
 <body>
@@ -47,19 +48,21 @@
                     <p>SCORE</p>
                     <canvas id="score"></canvas>
                 </div>
-                <ul class="controls">
-                    <li><button id="start-button" onclick="startPlay()"><i class="fas fa-play"></i>
-                            <br>Start</button></li>
-                    <li><button id="reset_button"><i class="fas fa-redo"></i>
-                            <br>Reset</button></li>
-                    <li><button id="mute_button"><i class="fas fa-volume-mute"></i>
-                            <br>Mute</button></li>
-                </ul>
+                <div class="controls"> 
+                    <div>
+                        <button id="start-button"><i class="fas fa-play"></i>
+                            <br>Start</button>
+                    </div>
+                    <div>
+                        <button id="mute-button"><i class="fas fa-volume-mute"></i>
+                            <br>Mute</button>
+                   </div>
+                </div>
             </div>
         </div>
     </section>
     <div class="hidden">
-        <!-- <audio id="sound" src="assets/sfx-pop.mp3"></audio> -->
+        <audio id="sound" src="assets/87403bafe004579d7802.mp3"></audio>
         <img id="animation" src="assets/f74c012a1c49bca58405.png">
         <img id="popped-animation" src="assets/4bce2982f661fd4c112a.png">
         <img id="frames" src="assets/59545f8247f3bbca45ec.png">

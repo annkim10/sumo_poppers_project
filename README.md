@@ -16,6 +16,7 @@ In addition, this project will include:
 
 
 ## Wireframes ##
+![sumo_poppers](src/assets/sumo_poppers.png)
 * Score Tracker
 * Game board with mouse movement controls 
 * About section with project's Github repo and myLinkedIn link

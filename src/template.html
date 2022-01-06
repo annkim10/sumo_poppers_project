@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <title>Sumo Poppers</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 
 <body>
@@ -47,19 +48,21 @@
                     <p>SCORE</p>
                     <canvas id="score"></canvas>
                 </div>
-                <ul class="controls">
-                    <li><button id="start-button" onclick="startPlay()"><i class="fas fa-play"></i>
-                            <br>Start</button></li>
-                    <li><button id="reset_button"><i class="fas fa-redo"></i>
-                            <br>Reset</button></li>
-                    <li><button id="mute_button"><i class="fas fa-volume-mute"></i>
-                            <br>Mute</button></li>
-                </ul>
+                <div class="controls"> 
+                    <div>
+                        <button id="start-button"><i class="fas fa-play"></i>
+                            <br>Start</button>
+                    </div>
+                    <div>
+                        <button id="mute-button"><i class="fas fa-volume-mute"></i>
+                            <br>Mute</button>
+                   </div>
+                </div>
             </div>
         </div>
     </section>
     <div class="hidden">
-        <!-- <audio id="sound" src="assets/sfx-pop.mp3"></audio> -->
+        <audio id="sound" src="assets/sfx-pop.mp3"></audio>
         <img id="animation" src="assets/resting_sumo.png">
         <img id="popped-animation" src="assets/popped_sumo.png">
         <img id="frames" src="assets/animeframes.png">

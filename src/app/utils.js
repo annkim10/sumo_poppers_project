@@ -24,4 +24,4 @@ scoreCanvas.width = 60
 scoreCanvas.height = 60
 export const scoreCtx = scoreCanvas.getContext("2d")
 
-
+export const audio = document.getElementById("sound")

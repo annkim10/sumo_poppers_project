@@ -1,13 +1,29 @@
 
 import Game from "./app/game"
-import Sumo from "./app/sumo";
+// import Sumo from "./app/sumo";
 import "./main.css";
 
+const startButton = document.getElementById("start-button")
 
 
-let game = new Game()
-game.startGame()
+window.onload = function() {
+    var context = new AudioContext()
+    var game = new Game()
 
-let sumo = new Sumo()
-// sumo.draw()
+    startButton.addEventListener("click", () => {
+      
+        game.startGame()
+        context.resume().then(() => {
+            console.log('Playback resumed successfully')
+        })
+    })
+
+    game.muteSound()
+    
+
+}
+
+
+
+
 

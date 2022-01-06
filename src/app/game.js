@@ -1,12 +1,13 @@
 import Sumo from "./sumo"
 import Player from "./player"
-import { canvas, ctx, mouse, scoreCanvas, scoreCtx} from "./utils"
+import { audio, canvas, ctx, mouse, scoreCanvas, scoreCtx} from "./utils"
 
 let canvasPos = canvas.getBoundingClientRect()
 const ring = document.getElementById("ring-img")
 const ringImg = new Image();
 ringImg.src = ring.src;
 
+const muteButton = document.getElementById("mute-button")
 
 window.addEventListener("resize", function(e){
     canvasPos = canvas.getBoundingClientRect()
@@ -42,6 +43,9 @@ export default class Game {
         this.gameFrame = 0
         this.score = 0
         this.player = new Player()
+        this.sound = audio
+        this.sound.src = audio.src
+        this.sound.loop = false
     }
 
     startGame() {
@@ -81,6 +85,7 @@ export default class Game {
             
                         // this.sumosArr[i].popping()
                         this.sumosArr[i].popped = true
+                        this.sound.play()
                         // this.binding = this.sumosArr.splice(this, )
                         // setTimeout(this.sumosArr.splice)
                         // this.sumosArr.splice(i, 1)
@@ -96,7 +101,13 @@ export default class Game {
             // console.log(this.score)
         };
 
+        muteSound() {
+            muteButton.addEventListener("click", () => {
+                this.sound.muted = true
+            }) 
+        }
 
+        
 
     }
 

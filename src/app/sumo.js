@@ -1,4 +1,12 @@
 import { canvas, ctx } from "./utils"
+// import { Howl, Howler } from 'howler';
+// const { Howl, Howler } = require('howler');
+
+
+// const sound = new Howl({
+//     src: 'audio.src'
+// })
+
 
 const animation = document.getElementById("animation")
 const sumoImg = new Image();
@@ -72,7 +80,7 @@ export default class Sumo {
             ctx.closePath()
             ctx.fillRect(this.x, this.y, this.radius, 0)
             ctx.drawImage(sumoImg, this.x - 40, this.y - 44, 80, 80)
-        } else {
+        } else if (this.popped) {
             ctx.fillStyle = "#bd0028"
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
@@ -80,6 +88,7 @@ export default class Sumo {
             ctx.closePath()
             ctx.fillRect(this.x, this.y, this.radius, 0)
             ctx.drawImage(poppedSumo, this.x - 40, this.y - 44, 80, 80)
+            // sound.play()
         }
     }
 
